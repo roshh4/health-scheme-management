@@ -2,13 +2,8 @@ import React from 'react'
 import './regis.css'
 
 const regis = () => {
-  const options = [
-    {label: "Male", value:"M"},
-    {label: "Female", value:"F"},
-    {label: "Third-Gender", value:"T"}
-  ]
   return (
-    <div className='wrapper'>
+    <div>
         <form action=''>
             <h1>Registration</h1>
             <div className='input_box'>
@@ -17,10 +12,22 @@ const regis = () => {
             <div className='input_box'>
                 <input type='text' placeholder='Age' required/>
             </div>
+
             <div className='dropdown'>
-                <h4>Gender</h4>
-              
-            </div>
+              <div className='dropdown_btn'>Gender</div>
+                <div className='dropdown_content'>
+                  <div className='dropdown_item'>
+                    Male
+                  </div>
+                  <div className='dropdown_item'>
+                    Female
+                  </div>
+                  <div className='dropdown_item'>
+                    Third Gender
+                  </div>
+                </div>
+                </div>
+
             <button type='submit'>Register</button>
         </form>
     </div>

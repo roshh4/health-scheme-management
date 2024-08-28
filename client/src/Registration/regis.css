@@ -4,6 +4,27 @@
     text-align: center;
 }
 
+.container{
+    width: 100%;
+    height: 100vh;
+}
+
+.dropdown{
+    width: 400px;
+    margin: 100px auto;
+}
+
+.dropdown .dropdown_btn{
+    padding: 10px;
+    background: #fff;
+    box-shadow: 3px 3px 10px 6px #e6e6e6;
+    font-weight: bold;
+    color: #333;
+    display: flex;
+    text-align: center;
+    justify-content: space-between;
+}
+
 body{
     margin: 0;
     font-family: "Poppins", sans-serif;

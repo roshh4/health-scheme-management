@@ -7,7 +7,10 @@ const regis = () => {
         <form action=''>
             <h1>Registration</h1>
             <div className='input_box'></div>
-                <input type='text' placeholder='Name'/>
+                <input type='text' placeholder='Name' required/>
+            <div className='input_box'></div>
+                <input type='text' placeholder='Age' required/>
+            
         </form>
     </div>
   )

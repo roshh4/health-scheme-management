@@ -1,6 +1,6 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import './home.css'; 
+import { Link, Outlet } from "react-router-dom";
+import './home.css'; // Optional: Include CSS for styling
 
 function Home() {
   return (
@@ -9,18 +9,18 @@ function Home() {
       <nav className="navbar">
         <ul className="navbar-items">
           <li className="navbar-item">
-            <Link to="/disease">Disease</Link>
+            <Link to="/home/disease">Disease</Link>
           </li>
           <li className="navbar-item">
-            <Link to="/schemes">Schemes</Link>
+            <Link to="/home/schemes">Schemes</Link>
           </li>
         </ul>
       </nav>
 
       {/* Main Content */}
       <div className="home-content">
-        <h1>Welcome to the Home Page</h1>
-        <p>Select an option from the navigation bar to explore.</p>
+        {/* Outlet will render the child routes defined in App.js */}
+        <Outlet />
       </div>
     </div>
   );

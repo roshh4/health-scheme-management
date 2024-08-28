@@ -1,0 +1,35 @@
+/* Home.css */
+.navbar {
+    background-color: #333;
+    padding: 1rem;
+  }
+  
+  .navbar-items {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  .navbar-item {
+    margin: 0;
+  }
+  
+  .navbar-item a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    display: block;
+  }
+  
+  .navbar-item a:hover {
+    background-color: #555;
+    border-radius: 4px;
+  }
+  
+  .home-content {
+    text-align: center;
+    margin-top: 2rem;
+  }
+  

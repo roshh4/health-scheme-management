@@ -9,9 +9,6 @@ function Doctor() {
           .then(response => {
               setDoctors(response.data);
           })
-          .catch(error => {
-              console.error('There was an error fetching the doctors!', error);
-          });
   }, []);
 
   return (

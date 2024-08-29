@@ -5,21 +5,14 @@
     font-family: 'Arial', sans-serif;
 }
 
-body {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #f0f2f5;
-}
-
 .login-container {
+    align-items: center;
     background-color: #fff;
     padding: 30px;
     width: 350px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    text-align: center; /* Center align the content */
+    text-align: center;
 }
 
 .login-container img {

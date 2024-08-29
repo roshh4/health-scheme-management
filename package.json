@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@syncfusion/ej2-react-splitbuttons": "^26.2.10"
+  }
+}

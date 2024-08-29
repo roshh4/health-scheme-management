@@ -17,9 +17,7 @@ function Home() {
         </ul>
       </nav>
 
-      {/* Main Content */}
       <div className="home-content">
-        {/* Outlet will render the child routes defined in App.js */}
         <Outlet />
       </div>
     </div>

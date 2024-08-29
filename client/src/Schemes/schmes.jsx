@@ -1,6 +1,5 @@
 import React from "react";
 import "./schmes.css";
-import Pmjay from "./Pmjay";
 import { Link } from "react-router-dom";
 
 function Schemes() {
@@ -22,7 +21,7 @@ function Schemes() {
               Providing up to ₹5 lakh per family per year for secondary and tertiary hospital care. 
               It targets low-income families and aims to reduce out-of-pocket expenses on healthcare. 
             </p>
-            <Link to="/Schemes/Pmjay">
+            <Link to="/home/schemes/pmjay">
               Find out more
               <span aria-hidden="true">→</span>
             </Link>

@@ -1,24 +1,27 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom';
 import './App.css';
+import Registration from './Registration/regis';
+import Login from './Login/login';
+import Home from './Home/home';
+import Disease from './Disease/disease';
+import Schemes from './Schemes/schmes';
+import Pmjay from './Schemes/Pmjay';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Navigate to="/login" />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/Schemes/Pmjay" element={<Pmjay />} />
+        <Route path="/home" element={<Home />}>
+          <Route path="disease" element={<Disease />} />
+          <Route path="schemes" element={<Schemes />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 }
 

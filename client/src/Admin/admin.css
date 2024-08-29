@@ -1,38 +1,10 @@
-.logo{
-    width: 12vh;
-    height: 12vh;
-}
-.menu{
+.dashboard{
     display: flex;
-    flex-direction: column;
-    gap: 2.3rem;
-    height: 94vh;
-}
-.name{
-    text-align: center;
-    padding: 20px;
-    color: #27374d;
-    align-items: center;
-    display: flex;
-}
-.logo .icon{
-    font-size: 1.4rem;
-}
-.menu_list{
-    display: flex;
-    flex-direction: column;
     gap: 20px;
+    background-color: blue;
 }
-.menu_list .item{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    font-size: 1.1rem;
-    text-decoration: none;
-    font-weight: 600;
-    padding: 10px;
-    border-radius: 10px;
-    transition: 0.3s ease-in-out;
-    color: #27374d;
+.dashboard_content{
+    background: #ffffff;
+    flex: 1;
+    border-radius: 20px;
 }
-

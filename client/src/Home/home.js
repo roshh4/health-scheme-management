@@ -5,11 +5,10 @@ import './home.css';
 function Home() {
   return (
     <div>
-      {/* Navigation Bar */}
       <nav className="navbar">
         <ul className="navbar-items">
           <li className="navbar-item">
-            <Link to="/home/disease">Disease</Link>
+            <Link to="/home/disease">Doctors</Link>
           </li>
           <li className="navbar-item">
             <Link to="/home/schemes">Schemes</Link>

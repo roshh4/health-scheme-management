@@ -4,7 +4,7 @@ import './App.css';
 import Registration from './Registration/regis';
 import Login from './Login/login';
 import Home from './Home/home';
-import Disease from './Disease/disease';
+import Disease from './doctors/doctors';
 import Schemes from './Schemes/schmes';
 import Admin from './Admin/admin';
 

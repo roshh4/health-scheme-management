@@ -29,7 +29,7 @@ const regis = () => {
             </div>
             
         </form>
-    </div>
+        </div>
   )
 }
 

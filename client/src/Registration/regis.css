@@ -7,12 +7,14 @@ h1{
 .wrapper{
     text-align: center;
     padding-top: 8rem;
+    
 }
 .dropdown{
     width: 20.5%;
     height: 3.5rem;
     border-radius: 1rem;
     font-size: 1rem;
+    min-width: 305px;
 }
 .sub{
     padding-top: 1rem;
@@ -34,6 +36,7 @@ input{
 .input_box{
     height: 3rem;
     width: 20%;
+    min-width: 300px;
     border-radius: 1rem;
 }
 body{
@@ -42,7 +45,7 @@ body{
 }
 
 button{
-    background-color: #007bff;
+    background-color: #04AA6D;
     font-size: 1.5rem;
     font-weight: bold;
     border-radius: 1rem;

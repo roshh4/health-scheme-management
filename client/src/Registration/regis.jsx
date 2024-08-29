@@ -3,32 +3,31 @@ import './regis.css'
 
 const regis = () => {
   return (
-    <div>
+    <div className='wrapper'>
         <form action=''>
             <h1>Registration</h1>
-            <div className='input_box'>
-                <input type='text' placeholder='Name' required/>
+            <div className='input'>
+                <input className='input_box' type='text' placeholder='Name' required/>
             </div>
-            <div className='input_box'>
-                <input type='text' placeholder='Age' required/>
+            <div className='input'>
+                <input className='input_box' min="1" type='number' placeholder='Age' required/>
             </div>
 
-            <div className='dropdown'>
-              <div className='dropdown_btn'>Gender</div>
-                <div className='dropdown_content'>
-                  <div className='dropdown_item'>
-                    Male
-                  </div>
-                  <div className='dropdown_item'>
-                    Female
-                  </div>
-                  <div className='dropdown_item'>
-                    Third Gender
-                  </div>
-                </div>
-                </div>
-
+            <div className='drp'>
+                  <select className='dropdown'>
+                  <option>Gender</option>
+                      <option>Male</option>
+                      <option>Female</option>
+                      <option>Third Gender</option>
+                  </select>
+            </div>
+            <div className='input'>
+              <input className='input_box' type='text' placeholder='Aadhaar Number' required/>
+            </div>
+            <div className='sub'>
             <button type='submit'>Register</button>
+            </div>
+            
         </form>
     </div>
   )

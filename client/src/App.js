@@ -18,9 +18,9 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/admin" element={<Admin />}/>
         <Route path="/home" element={<Home />}>
-        <Route path="/Schemes/Pmjay" element={<Pmjay />}></Route>
           <Route path="disease" element={<Disease />} />
           <Route path="schemes" element={<Schemes />} />
+            <Route path="pmjay" element={<Pmjay />} />
         </Route>
       </Routes>
     </Router>
@@ -28,3 +28,4 @@ function App() {
 }
 
 export default App;
+

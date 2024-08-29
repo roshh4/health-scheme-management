@@ -1,0 +1,30 @@
+.container {
+    margin: 20px;
+}
+
+.curved-textbox {
+    background-color: whitesmoke;
+    border: 2px solid black; /* Border color and width */
+    border-radius: 12px; /* Curves the corners of the border */
+    padding: 10px; /* Space between text and border */
+    width: 80%; /* Makes the text box expand to fill its container */
+    font-size: 16px; /* Font size of the text inside the text box */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+    margin-left: 20vh;
+    margin-top: 5vh;
+    height: 275px;
+    padding-bottom:-100%;
+}
+
+.curved-textbox1 {
+    background-color: whitesmoke;
+    border: 2px solid black; /* Border color and width */
+    border-radius: 12px; /* Curves the corners of the border */
+    padding: 10px; /* Space between text and border */
+    width: 80%; /* Makes the text box expand to fill its container */
+    font-size: 16px; /* Font size of the text inside the text box */
+    box-sizing: border-box; /* Ensures padding is included in the element's total width and height */
+    margin-left: 20vh;
+    margin-top: 5vh;
+    height: 325px;
+}

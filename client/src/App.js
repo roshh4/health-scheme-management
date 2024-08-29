@@ -7,6 +7,7 @@ import Home from './Home/home';
 import Disease from './Disease/disease';
 import Schemes from './Schemes/schmes';
 import Admin from './Admin/admin';
+import Pmjay from './Schemes/Pmjay';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/admin" element={<Admin />}/>
         <Route path="/home" element={<Home />}>
+        <Route path="/Schemes/Pmjay" element={<Pmjay />}></Route>
           <Route path="disease" element={<Disease />} />
           <Route path="schemes" element={<Schemes />} />
         </Route>

@@ -12,11 +12,17 @@ function Login() {
     navigate("/home");
   };
 
+  const handleAdminClick = () => {
+    navigate("/admin");
+  };
+
+
   return (
     <div>
       <p>Login</p>
       <button onClick={handleRegisterClick}>Go to Registration</button>
       <button onClick={handleHomeClick}>Go to Home</button>
+      <button onClick={handleAdminClick}>Go to Admin</button>
     </div>
   );
 }

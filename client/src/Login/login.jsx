@@ -16,6 +16,11 @@ function Login() {
     navigate("/home");
   };
 
+  const handleAdminClick = () => {
+    navigate("/admin");
+  };
+
+
   return (
     <div className="login-container">
       <img src="logo.png" alt="Your Logo" />
@@ -41,6 +46,7 @@ function Login() {
       <p>Forgot your password?</p>
       <p>Don't have an account? <a onClick={handleRegisterClick}>Register</a></p>
       <button onClick={handleHomeClick}>Go to Home</button>
+      <button onClick={handleAdminClick}>Go to Admin</button>
     </div>
   );
 }

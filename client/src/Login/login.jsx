@@ -18,7 +18,7 @@ function Login() {
 
   return (
     <div className="login-container">
-      <img src="logo.png" alt="Your Logo" />
+      <img src="logo.png"/>
       <h2>Login</h2>
       <form>
         <input

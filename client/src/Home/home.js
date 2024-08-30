@@ -11,7 +11,13 @@ function Home() {
             <Link to="/home/disease">Doctors</Link>
           </li>
           <li className="navbar-item">
-            <Link to="/home/schemes">Schemes</Link>
+            <Link to="/home/schemes">
+           <select>
+           <option>Schemes</option>
+            <option>Central Schemes</option>
+            <option>State Schemes</option>
+            </select>
+            </Link>
           </li>
         </ul>
       </nav>

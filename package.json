@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "@syncfusion/ej2-react-splitbuttons": "^26.2.10"
+    "@syncfusion/ej2-react-splitbuttons": "^26.2.10",
+    "bootstrap": "^5.3.3"
   }
 }

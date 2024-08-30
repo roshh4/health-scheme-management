@@ -51,12 +51,12 @@
   
 
 .line1{
-    margin-top: 20vh;
+    margin-top: 10vh;
     display: flex;
     gap: 10px;
 }
 
 .text{
-    margin-left: 70vh;
+    margin-right: 2vh;
     margin-top: 10vh;
 }

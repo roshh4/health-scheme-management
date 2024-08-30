@@ -21,7 +21,7 @@ function Schemes() {
               Providing up to ₹5 lakh per family per year for secondary and tertiary hospital care. 
               It targets low-income families and aims to reduce out-of-pocket expenses on healthcare. 
             </p>
-            <Link to="/home/schemes/pmjay">
+            <Link to="/home/schemes/Central/pmjay">
               Find out more
               <span aria-hidden="true">→</span>
             </Link>
@@ -40,10 +40,10 @@ function Schemes() {
               This scheme offers accidental death and disability insurance coverage for a nominal annual premium. 
               It's designed to provide financial support in case of accidental injuries or death.
             </p>
-            <a className="action" href="/pmsby.html">
+            <Link to="/home/schemes/Central/pmsby">
               Find out more
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -59,10 +59,10 @@ function Schemes() {
               This is a life insurance scheme that offers a sum assured of ₹2 lakh in case of death due to any cause.
               It aims to provide financial security to families in case of the policyholder's demise.
             </p>
-            <a className="action" href="/pmjjby.html">
+            <Link to='/home/schemes/Central/pmjjby'>
               Find out more
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -78,10 +78,10 @@ function Schemes() {
               This scheme is aimed at reducing maternal and neonatal mortality by promoting institutional delivery among pregnant women, particularly in rural areas.
               It provides cash incentives for deliveries in healthcare institutions. 
             </p>
-            <a className="action" href="/jsy.html">
+            <Link to='/home/schemes/Central/jsy'>
               Find out more
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -96,10 +96,10 @@ function Schemes() {
             <p className="desc">
               This is an immunization program focusing on increasing the coverage of vaccines for children and pregnant women, especially in underserved areas.
             </p>
-            <a className="action" href="/mid.html">
+            <Link to='/home/schemes/Central/indhra'>
               Find out more
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
 
@@ -114,10 +114,10 @@ function Schemes() {
             <p className="desc">
               This program aims to control the spread of HIV/AIDS through prevention, care, support, and treatment services.
             </p>
-            <a className="action" href="/nacp.html">
+            <Link to="/home/schemes/Central/nacp">
               Find out more
               <span aria-hidden="true">→</span>
-            </a>
+            </Link>
           </div>
         </div>
       </div>

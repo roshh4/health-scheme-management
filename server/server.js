@@ -1,4 +1,5 @@
 const Doctor = require('./schema/doctor_schema');
+const Schemes = require('./schema/schemes_schema');
 
 const express = require('express');
 const app = express();
@@ -25,6 +26,15 @@ app.get('/api/doctors', async (req, res) => {
     try {
         const doctors = await Doctor.find();
         res.json(doctors);
+    } catch (err) {
+        res.status(500).json({ message: err.message });
+    }
+});
+
+app.get('/api/schemes', async (req, res) => {
+    try {
+        const schemes = await Schemes.find();
+        res.json(schemes);
     } catch (err) {
         res.status(500).json({ message: err.message });
     }

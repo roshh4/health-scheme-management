@@ -168,27 +168,33 @@ function Doctor() {
 
   return (
     <div className="App">
-        {/* RAMYA */}
       <h1>Doctor Directory</h1>
-      <ul className="doctor-list">
-        {doctors.map(doctor => (
-          <li key={doctor._id} className="doctor-list-item">
-            <div>
-              <div className="doctor-info">
-                <h2>{doctor.first_name} {doctor.last_name}</h2>
-              </div>
-              <div className="doctor-details">
-                <p>Specialization: {doctor.specialization}</p>
-                <p>Experience: {doctor.years_of_experience} years</p>
-                <p>Department: {doctor.department}</p>
-                <p>Consultation Fees: Rs. {doctor.consultation_fees}</p>
-                <p>Biography: {doctor.biography}</p>
-              </div>
-            </div>
-            <button>hi</button>
-          </li>
-        ))}
-      </ul>
+      <table className="doctor-table">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Specialization</th>
+            <th>Experience</th>
+            <th>Department</th>
+            <th>Consultation Fees</th>
+            <th>Biography</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {doctors.map(doctor => (
+            <tr key={doctor._id}>
+              <td>{doctor.first_name} {doctor.last_name}</td>
+              <td>{doctor.specialization}</td>
+              <td>{doctor.years_of_experience} years</td>
+              <td>{doctor.department}</td>
+              <td>Rs. {doctor.consultation_fees}</td>
+              <td>{doctor.biography}</td>
+              <td><button>Update</button></td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
       <button className='add-doctor' onClick={() => setShowForm(true)}>Add Doctor</button>
 
       {showForm && (
@@ -332,26 +338,81 @@ function Doctor() {
                 <button type="button" onClick={() => removeDynamicInput(index, 'availability.days')}>Remove</button>
               </div>
             ))}
-            <button type="button" onClick={() => addDynamicInput('availability.days')}>Add Another Day</button>
+            <button type="button" onClick={() => addDynamicInput('availability.days')}>Add Another Available Day</button>
             <input
               type="text"
-              name="time"
+              name="availability.time"
               placeholder="Available Time"
               value={newDoctor.availability.time}
               onChange={handleAvailabilityChange}
               required
             />
-            <h3>Hospital Affiliation</h3>
-            <select
+            <h3>Languages Spoken</h3>
+            {newDoctor.languages_spoken.map((lang, index) => (
+              <div key={index}>
+                <input
+                  type="text"
+                  value={lang}
+                  onChange={(e) => handleDynamicInputChange(index, 'languages_spoken', e)}
+                  placeholder={`Language ${index + 1}`}
+                />
+                <button type="button" onClick={() => removeDynamicInput(index, 'languages_spoken')}>Remove</button>
+              </div>
+            ))}
+            <button type="button" onClick={() => addDynamicInput('languages_spoken')}>Add Another Language</button>
+            <textarea
+              name="biography"
+              placeholder="Biography"
+              value={newDoctor.biography}
+              onChange={handleInputChange}
+              required
+            />
+            <h3>Awards</h3>
+            {newDoctor.awards.map((award, index) => (
+              <div key={index}>
+                <input
+                  type="text"
+                  value={award}
+                  onChange={(e) => handleDynamicInputChange(index, 'awards', e)}
+                  placeholder={`Award ${index + 1}`}
+                />
+                <button type="button" onClick={() => removeDynamicInput(index, 'awards')}>Remove</button>
+              </div>
+            ))}
+            <button type="button" onClick={() => addDynamicInput('awards')}>Add Another Award</button>
+            <h3>Emergency Contact</h3>
+            <input
+              type="text"
+              name="name"
+              placeholder="Contact Name"
+              value={newDoctor.emergency_contact.name}
+              onChange={handleEmergencyContactChange}
+              required
+            />
+            <input
+              type="text"
+              name="relationship"
+              placeholder="Relationship"
+              value={newDoctor.emergency_contact.relationship}
+              onChange={handleEmergencyContactChange}
+              required
+            />
+            <input
+              type="text"
+              name="contact_number"
+              placeholder="Emergency Contact Number"
+              value={newDoctor.emergency_contact.contact_number}
+              onChange={handleEmergencyContactChange}
+              required
+            />
+            <input
+              type="text"
               name="hospital_affiliation"
+              placeholder="Hospital Affiliation"
               value={newDoctor.hospital_affiliation}
               onChange={handleInputChange}
               required
-            >
-              <option value="">Select Hospital Affiliation</option>
-              <option value="Apollo">Apollo</option>
-              <option value="Chettinad">Chettinad</option>
-            </select>
+            />
             <input
               type="text"
               name="department"
@@ -368,7 +429,6 @@ function Doctor() {
               onChange={handleInputChange}
               required
             />
-            <h3>Date of Joining</h3>
             <input
               type="date"
               name="date_of_joining"
@@ -377,7 +437,6 @@ function Doctor() {
               onChange={handleInputChange}
               required
             />
-            <h3>License Validity</h3>
             <input
               type="date"
               name="license_validity"
@@ -386,75 +445,7 @@ function Doctor() {
               onChange={handleInputChange}
               required
             />
-            <h3>Languages Spoken</h3>
-            {newDoctor.languages_spoken.map((language, index) => (
-              <div key={index}>
-                <input
-                  type="text"
-                  value={language}
-                  onChange={(e) => handleDynamicInputChange(index, 'languages_spoken', e)}
-                  placeholder={`Language ${index + 1}`}
-                  required
-                />
-                <button type="button" onClick={() => removeDynamicInput(index, 'languages_spoken')}>Remove</button>
-              </div>
-            ))}
-            <button type="button" onClick={() => addDynamicInput('languages_spoken')}>Add Another Language</button>
-            <input
-              type="text"
-              name="profile_picture_url"
-              placeholder="Profile Picture URL"
-              value={newDoctor.profile_picture_url}
-              onChange={handleInputChange}
-              required
-            />
-            <textarea
-              name="biography"
-              placeholder="Biography"
-              value={newDoctor.biography}
-              onChange={handleInputChange}
-              required
-            />
-            <h3>Awards</h3>
-            {newDoctor.awards.map((award, index) => (
-              <div key={index}>
-                <input
-                  type="text"
-                  value={award}
-                  onChange={(e) => handleDynamicInputChange(index, 'awards', e)}
-                  placeholder={`Award ${index + 1}`}
-                  required
-                />
-                <button type="button" onClick={() => removeDynamicInput(index, 'awards')}>Remove</button>
-              </div>
-            ))}
-            <button type="button" onClick={() => addDynamicInput('awards')}>Add Another Award</button>
-            <h3>Emergency Contact</h3>
-            <input
-              type="text"
-              name="name"
-              placeholder="Name"
-              value={newDoctor.emergency_contact.name}
-              onChange={handleEmergencyContactChange}
-              required
-            />
-            <input
-              type="text"
-              name="relationship"
-              placeholder="Relationship"
-              value={newDoctor.emergency_contact.relationship}
-              onChange={handleEmergencyContactChange}
-              required
-            />
-            <input
-              type="text"
-              name="contact_number"
-              placeholder="Contact Number"
-              value={newDoctor.emergency_contact.contact_number}
-              onChange={handleEmergencyContactChange}
-              required
-            />
-            <button type="submit">Submit</button>
+            <button type="submit">Add Doctor</button>
             <button type="button" onClick={() => setShowForm(false)}>Cancel</button>
           </form>
         </div>

@@ -27,7 +27,7 @@ function Schemes() {
             <div className="image"></div>
             <div className="content">
               <a href="#">
-                <span className="title">{scheme.title}</span>
+                <span className="title">{scheme.name}</span>
               </a>
               <p className="desc">{scheme.description}</p>
               <Link to={`/home/schemes/${index}`}>

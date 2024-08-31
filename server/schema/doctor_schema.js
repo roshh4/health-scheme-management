@@ -18,13 +18,6 @@ const doctorSchema = new mongoose.Schema({
     qualification: { type: [String], required: true },
     years_of_experience: { type: Number, required: true },
     consultation_fees: { type: Number, required: true },
-    availability: {
-        days: { type: [String], required: true }, // e.g., ['Monday', 'Wednesday']
-        time: {
-            start: { type: String, required: true }, // e.g., '09:00 AM'
-            end: { type: String, required: true } // e.g., '05:00 PM'
-        }
-    },
     hospital_affiliation: { type: mongoose.Schema.Types.ObjectId, ref: 'Hospital', required: true },
     employee_id: { type: String, required: true },
     department: { type: String, required: true },

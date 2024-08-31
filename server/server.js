@@ -39,3 +39,22 @@ app.get('/api/schemes', async (req, res) => {
         res.status(500).json({ message: err.message });
     }
 });
+
+app.post('/api/hi', async (req, res) => {
+    try {
+      console.log('Request received:', req.body); // Log request body for debugging
+  
+      // Create a new doctor with the data received from the request
+      const doctor = new Doctor(req.body);
+  
+      // Save the new doctor to the database
+      const savedDoctor = await doctor.save();
+  
+      // Send the saved doctor back as a response
+      res.json(savedDoctor);
+    } catch (err) {
+      console.error('Error adding doctor:', err); // Log error for debugging
+      res.status(400).json({ message: err.message });
+    }
+  });
+  

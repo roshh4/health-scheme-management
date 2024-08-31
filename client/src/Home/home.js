@@ -8,7 +8,7 @@ function Home() {
       <nav className="navbar">
         <ul className="navbar-items">
           <li className="navbar-item">
-            <Link to="/home/disease">Doctors</Link>
+            <Link to="/home/doctor">Doctors</Link>
           </li>
           <li className="navbar-item">
             <Link to="/home/schemes">Schemes</Link>

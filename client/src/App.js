@@ -4,7 +4,7 @@ import './App.css';
 import Registration from './Registration/regis';
 import Login from './Login/login';
 import Home from './Home/home';
-import Disease from './doctors/doctors';
+import Doctor from './doctors/doctors';
 import Schemes from './Schemes/schmes';
 import Admin from './Admin/admin';
 import Pmjay from './Schemes/Pmjay';
@@ -18,7 +18,7 @@ function App() {
         <Route path="/registration" element={<Registration />} />
         <Route path="/admin" element={<Admin />}/>
         <Route path="/home" element={<Home />}>
-          <Route path="disease" element={<Disease />} />
+          <Route path="doctor" element={<Doctor />} />
           <Route path="schemes" element={<Schemes />} />
           <Route path="schemes/pmjay" element={<Pmjay />} />
         </Route>
